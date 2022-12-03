@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useSnapshot } from "valtio";
-import { state } from "../../common/state";
-import { TextInput, NumberInput } from "../../components/form/form.input";
-import { getUser, NewUser } from "../../services/firebase.services";
+import { state } from "../../../common/state";
+import { TextInput, NumberInput } from "../../../components/form/form.input";
+import { getUser, NewUser } from "../../../services/firebase.services";
 import styles from "./onboarding.module.scss";
 
 function Form({ setStep }) {
