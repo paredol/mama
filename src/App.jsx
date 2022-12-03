@@ -6,7 +6,7 @@ import './App.css'
 import Home from './seller/pages/home'
 import Products from './seller/pages/products'
 import Layout from './seller/components/layout'
-
+import Onboarding from "./pages/onboarding/onboarding";
 import Orders from './seller/pages/order';
 import Discounts from './seller/pages/discount';
 import Customers from './seller/pages/customers';
@@ -18,6 +18,7 @@ function App() {
       {/*Admin routes*/}
       <BrowserRouter>
             <Routes>
+                <Route path="/signin" element={<Onboarding/>}/>
                 <Route path="/" element={<Layout/>}/>
                 <Route index element={<Home/>}/>
                 <Route path="/products" element={<Products/>}/>
@@ -27,7 +28,7 @@ function App() {
             </Routes>
         </BrowserRouter>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
