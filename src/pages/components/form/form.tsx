@@ -1,4 +1,4 @@
-import { Dispatch, FormEvent } from "react";
+import { Dispatch, FormEvent, SetStateAction } from "react";
 import { NewUser } from "../../../services/firebase.services";
 import { IntInput, TextInput } from "./form.input";
 import styles from "./form.module.scss";
@@ -14,7 +14,7 @@ export interface userProps {
 export function Form({
   setStep,
 }: {
-  setStep: Dispatch<React.SetStateAction<number>>;
+  setStep: Dispatch<SetStateAction<number>>;
 }) {
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();

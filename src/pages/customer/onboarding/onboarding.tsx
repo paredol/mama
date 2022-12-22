@@ -11,11 +11,17 @@ export default function Onboarding() {
 
   // console.log(user);
 
+
+
   return (
     <div className={styles.Onboarding}>
       {step === 1 ? (
         <>
+          <div className="flex flex-row rounded-xl justify-around items-center w-full h-20 bg-slate-200 dark:bg-slate-800 ">
           <h1>Sign Up</h1>
+          <p>or</p>
+            <a href="/signin">Sign In</a>
+          </div>
           <Form setStep={setStep} />
         </>
       ) : step === 2 ? (
