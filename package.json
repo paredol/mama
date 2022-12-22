@@ -4,31 +4,28 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "deploy": "vite build && firebase deploy",
     "dev": "vite",
-    "build": "vite build",
+    "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "bootstrap": "^5.2.3",
-    "antd": "^5.0.3",
-    "firebase": "^9.14.0",
+    "@types/react-router": "^5.1.19",
+    "firebase": "^9.15.0",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.4.4",
-    "sass": "^1.56.1",
+    "react-router": "^6.5.0",
+    "react-router-dom": "^6.5.0",
+    "sass": "^1.57.1",
     "sort-by": "^1.2.0",
     "valtio": "^1.7.6"
   },
   "devDependencies": {
-    "@types/react": "^18.0.24",
-    "@types/react-dom": "^18.0.8",
-    "@vitejs/plugin-react": "^2.2.0",
-    "eslint": "^8.28.0",
-    "eslint-config-google": "^0.14.0",
-    "eslint-plugin-react": "^7.31.11",
-    "vite": "^3.2.3"
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.9",
+    "@vitejs/plugin-react": "^3.0.0",
+    "typescript": "^4.9.3",
+    "vite": "^4.0.0"
   }
 }
