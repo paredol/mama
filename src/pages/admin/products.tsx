@@ -5,36 +5,41 @@ const data = [
   {
     title: "Product Name",
     media: "http://www.w3.org/2000/svg",
-    status: false,
+    status: "Active",
     invetory: 0,
+    type:"",
     description: "Description",
   },
   {
     title: "Product Name",
     media: "http://www.w3.org/2000/svg",
-    status: false,
+    status: "Draft",
     invetory: 0,
+    type:"",
     description: "Description",
   },
   {
     title: "Product Name",
     media: "http://www.w3.org/2000/svg",
-    status: false,
+    status: "Achived",
     invetory: 0,
+    type:"",
     description: "Description",
   },
   {
     title: "Product Name",
     media: "http://www.w3.org/2000/svg",
-    status: false,
+    status: "Active",
     invetory: 0,
+    type:"",
     description: "Description",
   },
   {
     title: "Product Name",
     media: "http://www.w3.org/2000/svg",
-    status: false,
+    status: "Achived",
     invetory: 0,
+    type:"",
     description: "Description",
   },
 ];
@@ -42,27 +47,29 @@ const data = [
 export default function Products() {
   return (
     <div>
-      <div className="col-8">
-        <div className="row">
-          <div className=" Col-4">Prooducts</div>
-          <div className="col-8">
+      <div className="container">
+        <div className="flex justify-between">
+          <div>Prooducts</div>
+          <div>
             <button>Add Product</button>
           </div>
         </div>
-        {/* List of products */}
 
-        <table className="col-12 products" id="products">
-          <tr>
-            <th>Product</th>
-            <th>Status</th>
-            <th>Invetory</th>
+
+        <table className="container products" id="products">
+          <tr className="flex justify-evenly">
+            <th><input type="checkbox" className=""/></th>
+            <th className="w-full">Product</th>
+            <th className="w-full">Status</th>
+            <th className="w-full">Invetory</th>
           </tr>
           {data.map((val, key) => {
             return (
-              <tr key={key}>
-                <td>{val.title}</td>
-                <td>{val.status}</td>
-                <td>{val.invetory}</td>
+              <tr className="flex justify-evenly" key={key}>
+                <td className="w-full" ><input type="checkbox" className="w-"/></td>
+                <td className="w-full" >{val.title}</td>
+                <td className="w-full">{val.status}</td>
+                <td className="w-full">{val.invetory}</td>
               </tr>
             );
           })}

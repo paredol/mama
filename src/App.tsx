@@ -8,6 +8,7 @@ import Products from "./pages/admin/products";
 import Customers from "./pages/admin/customers";
 import Orders from "./pages/admin/orders";
 import Discounts from "./pages/admin/discount";
+import NewProducts from "./pages/admin/newProduct";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/customers" element={<Layout Page={Customers} />} />
           <Route path="/orders" element={<Layout Page={Orders} />} />
           <Route path="/discounts" element={<Layout Page={Discounts} />} />
+          <Route path="/products/new" element={<Layout Page={NewProducts} />} />
         </Routes>
       </BrowserRouter>
     </div>

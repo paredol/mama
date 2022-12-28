@@ -8,6 +8,7 @@ export default function Navbar() {
     { name: "Customers", path: "/customers" },
     { name: "Products", path: "/products" },
     { name: "Discounts", path: "/discounts" },
+    { name:"New Product", path:"products/new" },
   ];
 
 
