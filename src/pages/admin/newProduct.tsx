@@ -51,7 +51,7 @@ export default function newProduct(){
        <form action="">
            <div>
              <label>Product Name</label>
-             <input className="w-full h-64" type="text"/>
+             <textarea className="w-full h-64"/>
            </div>
           <label >Item identifier</label>
            <select name="item Identifier" id="itemIdentifier">
