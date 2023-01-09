@@ -12,7 +12,7 @@ import NewProducts from "./pages/admin/newProduct";
 
 function App() {
   return (
-    <div className="h-screen p-4 flex justify-start flex-col ">
+    <>
       <BrowserRouter>
         <Routes>
           {/* Customer routes */}
@@ -27,7 +27,7 @@ function App() {
           <Route path="/products/new" element={<Layout Page={NewProducts} />} />
         </Routes>
       </BrowserRouter>
-    </div>
+    </>
   );
 }
 
