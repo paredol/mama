@@ -1,6 +1,6 @@
 import React from 'react'
 import { Squeeze as Hamburger } from 'hamburger-react'
-import {navProps} from "@common/ui.d"
+import {navProps} from "../../common/types"
 
 export default function Navbar({menu, setMenu}:navProps) {
   return (

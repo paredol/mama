@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import {BsArrowDownCircle} from 'react-icons/bs'
-import { navProps } from "@common/ui.d"
+import { navProps } from "../../common/types"
 
 export default function SubNavbar({menu, setMenu}:navProps) {
 

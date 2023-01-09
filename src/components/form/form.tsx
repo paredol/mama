@@ -1,5 +1,5 @@
 import { Dispatch, FormEvent, SetStateAction } from "react";
-import { NewUser } from "../../../services/firebase.services";
+import { NewUser } from "../../api/firebase.services";
 import { IntInput, TextInput } from "./form.input";
 import styles from "./form.module.scss";
 
@@ -29,7 +29,7 @@ export function Form({
   }
   return (
     <>
-      <form onSubmit={handleSubmit} className={styles.UserForm}>
+      <form onSubmit={handleSubmit} className="flex flex-col gap-3">
         <TextInput label="First Name" />
         <TextInput label="Last Name" />
         <IntInput label="Phone" />

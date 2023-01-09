@@ -1,7 +1,7 @@
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
 import { state } from "../common/state";
-import { userProps } from "../pages/components/form/form";
+import { userProps } from "../components/form/form";
 import { auth, db } from "./firebase.config";
 
 export async function NewUser(user: any) {

@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { useSnapshot } from "valtio";
 import { state } from "../../../common/state";
-import { getUser } from "../../../services/firebase.services";
-import { Form } from "../../components/form/form";
-import styles from "./onboarding.module.scss";
+// import { getUser } from "../../../common/state";
+import { Form } from "../../../components/form/form";
 
 export default function Onboarding() {
   const [step, setStep] = useState(1);
@@ -14,16 +13,16 @@ export default function Onboarding() {
 
 
   return (
-    <div className={styles.Onboarding}>
+    <div className="flex w-full justify-center">
       {step === 1 ? (
-        <>
-          <div className="flex flex-row rounded-xl justify-around items-center w-full h-20 bg-slate-200 dark:bg-slate-800 ">
+        <div className="flex flex-col gap-y-4">
+          <div className="flex flex-row rounded-xl justify-around items-center w-full h-20 bg-slate-200 dark:bg-slate-800 p-3">
           <h1>Sign Up</h1>
           <p>or</p>
             <a href="/signin">Sign In</a>
           </div>
           <Form setStep={setStep} />
-        </>
+        </div>
       ) : step === 2 ? (
         <>
           <h1>Next Steps</h1>
