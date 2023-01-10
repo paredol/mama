@@ -1,7 +1,7 @@
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged, User } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
+import { useEffect, useState } from "react";
 import { state } from "../common/state";
-import { userProps } from "../components/form/form";
 import { auth, db } from "./firebase.config";
 
 export async function NewUser(user: any) {
@@ -38,3 +38,19 @@ export function getUser() {
   // get user from database
   console.log(auth.currentUser);
 }
+
+export function useUser() {
+  const [user, setUser] = useState<User | null>(null);
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) setUser(user);
+      else setUser(null);
+    });
+  }, [auth, setUser]);
+
+  return user;
+}
+
+
+// make a function to log in user with email and password

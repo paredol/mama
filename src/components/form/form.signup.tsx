@@ -1,17 +1,8 @@
 import { Dispatch, FormEvent, SetStateAction } from "react";
 import { NewUser } from "../../api/firebase.services";
 import { IntInput, TextInput } from "./form.input";
-import styles from "./form.module.scss";
 
-export interface userProps {
-  firstname: string;
-  lastname: string;
-  phone: string;
-  email: string;
-  password: string;
-}
-
-export function Form({
+export function SignUpForm({
   setStep,
 }: {
   setStep: Dispatch<SetStateAction<number>>;
@@ -36,7 +27,7 @@ export function Form({
         <TextInput label="Email" />
         <TextInput label="Password" />
         <p>Password must be 6char +</p>
-        <button type="submit">Submit</button>
+        <button type="submit">Continue</button>
       </form>
     </>
   );

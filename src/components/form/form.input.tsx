@@ -13,7 +13,7 @@ export function TextInput(props: { label: string }) {
           minLength={6}
           autoComplete="off"
           placeholder={label}
-        className="text-base p-2 invalid:border-red-500 outline-none"
+        className="text-base p-2 invalid:border-red-500 outline-none shadow-lg"
           required
         ></input>
       // </label>
@@ -27,7 +27,7 @@ export function TextInput(props: { label: string }) {
           name={field}
           type={"text"}
         placeholder={label}
-        className="text-base p-2 outline-none"
+        className="text-base p-2 outline-none shadow-lg"
           required
         ></input>
       // </label>
@@ -51,7 +51,7 @@ export function IntInput(props: { label: string }) {
         name={field}
         type="text"
         placeholder={label}
-        className="text-base p-2 outline-none"
+        className="text-base p-2 outline-none shadow-lg"
         required
       ></input>
     // </label>
